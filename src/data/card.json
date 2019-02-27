@@ -1,0 +1,29 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "japan": "こんにちは",
+            "sven": "Hej",
+            "uttalar": "Kon'nichiwa"
+        },
+        {
+            "id": 2,
+            "japan": "良いです",
+            "sven": "Det är bra.",
+            "uttalar": "Yoidesu"
+        },
+        {
+            "id": 3,
+            "japan": "愛",
+            "sven": "kärlek",
+            "uttalar": "Ai"
+        },
+        {
+            "id": 4,
+            "japan": "白",
+            "sven": "Vit",
+            "uttalar": "Shiro"
+        }
+
+    ]
+}
