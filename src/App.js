@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import { Tab,Tabs } from 'react-bootstrap';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
 import './App.css';
 import Card from './Card/Card';
@@ -9,6 +9,7 @@ import DrawButton from './DrawButton/DrawButton';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import Home from './component/Home';
+import NavbarCustomer from './component/NavbarCustomer';
 import NoteComment from './component/NoteComment';
 
 import { DB_CONFIG } from './config/firebase/db_config';
@@ -70,20 +71,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-            <Tabs
-        id="controlled-tab-example"
-        activeKey={this.state.key}
+      <NavbarCustomer />
+        <Tabs
+        activeKey={this.state.key} 
         onSelect={key => this.setState({ key })}
       >
-        <Tab eventKey="ez-language" title="EZ-Language" disabled>
+        <Tab eventKey="ez-language" title="EZ-Language">
         <Home />
         </Tab>
-        <Tab eventKey="home" title="Home">
-        <Home />
-        </Tab>
-        <Tab eventKey="sweden-thai" title="Sweden-Thai">
+        <Tab eventKey="sweden-thai" title="Sweden-Thai" >
         <div className="cardRow">
-        <div><h1 className="h1">Sweden - Thai Language</h1></div>
+        <div><h1 className="h1">Sweden - Thai</h1></div>
           <Card thai={this.state.currentCard.thai}
                 sven={this.state.currentCard.sven}
                 uttalar1={this.state.currentCard.uttalar1}
@@ -96,7 +94,7 @@ class App extends Component {
         </Tab>
         <Tab eventKey="sweden-japan" title="Sweden-Japan">
         <div className="cardRow">
-        <div><h1 className="h1">Sweden - Japan Language</h1></div>
+        <div><h1 className="h1">Sweden - Japan</h1></div>
           <Card2 japan={this.state.currentCard.japan}
                 sven={this.state.currentCard.sven}
                 uttalar={this.state.currentCard.uttalar}
@@ -109,7 +107,7 @@ class App extends Component {
         </Tab>
         <Tab eventKey="sweden-iaq" title="Sweden-Iraq">
         <div className="cardRow">
-        <div><h1 className="h1">Sweden - Iraq Language</h1></div>
+        <div><h1 className="h1">Sweden - Iraq</h1></div>
           <Card thai={this.state.currentCard.thai}
                 sven={this.state.currentCard.sven}
                 uttalar={this.state.currentCard.uttalar}
@@ -123,7 +121,6 @@ class App extends Component {
         <Tab eventKey="more" title="More" disabled>
         Learn More
         </Tab>
-        
       </Tabs>
       </div>
     );

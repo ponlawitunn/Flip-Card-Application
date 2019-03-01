@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-import { Jumbotron, Row, Col, Image, Button } from 'react-bootstrap';
+import { Jumbotron, Row, Col, Image} from 'react-bootstrap';
 import './Home.css';
 
 export default class Home extends Component {
@@ -16,17 +15,17 @@ export default class Home extends Component {
         </Jumbotron>
         <Row className="show-grid text-center">
           <Col xs={12} sm={4} className="person-wrapper">
-            <Image src="picture/thai-sweden1.jpg" circle className="profile-pic"/>
+            <Image src="picture/thai-sweden1.jpg" roundedCircle className="profile-pic"/>
             <h3>Thai-Sweden</h3>
             <p>That's a crooked tree. We'll send him to Washington. These little son of a guns hide in your brush and you just have to push them out.</p>
           </Col>
           <Col xs={12} sm={4} className="person-wrapper">
-            <Image src="picture/japan-sweden.jpg" circle className="profile-pic"/>
+            <Image src="picture/japan-sweden.jpg" roundedCircle className="profile-pic"/>
             <h3>Japan-Sweden</h3>
             <p>That's a crooked tree. We'll send him to Washington. These little son of a guns hide in your brush and you just have to push them out.</p>
           </Col>
           <Col xs={12} sm={4} className="person-wrapper">
-            <Image src="picture/iraq-sweden.jpg" circle className="profile-pic"/>
+            <Image src="picture/iraq-sweden.jpg" roundedCircle className="profile-pic"/>
             <h3>Iraq-Sweden</h3>
             <p>That's a crooked tree. We'll send him to Washington. These little son of a guns hide in your brush and you just have to push them out.</p>
           </Col>
